@@ -1,35 +1,6 @@
 package eu.asangarin.tt.api.rewards;
 
 import org.bukkit.Bukkit;
-import org.bukkit.entity.HumanEntity;
-
-import eu.asangarin.aria.utils.LineConfig;
-import eu.asangarin.tt.api.TechReward;
-import eu.asangarin.tt.data.TechEntry;
-
-public class CommandReward implements TechReward {
-	private String command;
-	private boolean console;
-
-	@Override
-	public void reward(HumanEntity p) {
-		String cmd = command.replace("{player}", p.getName());
-		if(console) Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
-		else Bukkit.dispatchCommand(p, cmd);
-	}
-
-	@Override
-	public TechReward setup(TechEntry entry, LineConfig c) {
-		command = c.getString("format");
-		console = c.getBoolean("console", false);
-		return this;
-	}
-}
-
-
-package eu.asangarin.tt.api.rewards;
-
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import eu.asangarin.aria.utils.LineConfig;
