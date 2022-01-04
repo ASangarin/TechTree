@@ -1,5 +1,7 @@
 ![TechTree Title](https://i.imgur.com/UjpKTVO.png)
 
+[Spigot Page](https://www.spigotmc.org/resources/techtree.98962/)
+
 TechTree is a simple, yet powerful plugin which lets you create fully customized and unique progression for your server.
 The possibilities are endless and only limited by your creative ability.
 
